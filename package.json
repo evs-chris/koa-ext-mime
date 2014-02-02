@@ -1,0 +1,17 @@
+{
+  "name": "koa-ext-mime",
+  "version": "0.0.1",
+  "description": "Middleware that sets up content negotiation by preferring the mime type of the request uri extension first.",
+  "homepage": "https://github.com/evs-chris/koa-ext-mime",
+  "license": "MIT",
+  "author": { "name": "Chris Reeves" },
+  "main": "index.js",
+  "repository": { "type": "git", "url": "https://github.com/evs-chris/koa-ext-mime.git" },
+  "files": [ "package.json", "index.js", "LICENSE.md" ],
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "dependencies": {
+    "mime": "1.2.x"
+  }
+}
