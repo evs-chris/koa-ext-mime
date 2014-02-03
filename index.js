@@ -15,7 +15,7 @@ module.exports = function(config) {
       if (this[ext] == t || re == t)
         return t;
     }
-    return this[prefix + 'Accepts'].call(this, arguments);
+    return this[prefix + 'Accepts'].apply(this, arguments);
   };
 
   var middleware = function*(next) {
