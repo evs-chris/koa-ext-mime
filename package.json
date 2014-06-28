@@ -1,6 +1,6 @@
 {
   "name": "koa-ext-mime",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Middleware that sets up content negotiation by preferring the mime type of the request uri extension first.",
   "homepage": "https://github.com/evs-chris/koa-ext-mime",
   "license": "MIT",
