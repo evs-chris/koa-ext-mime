@@ -1,8 +1,8 @@
+'use strict';
+
 var mime = require('mime');
 
 module.exports = function(config) {
-  'use strict';
-
   var cfg = config || {};
   var prefix = cfg.prefix || 'original';
   var ext = cfg.extensionName || 'requestExtension';
@@ -19,13 +19,16 @@ module.exports = function(config) {
   };
 
   var middleware = function*(next) {
-    var m = this.path.match(/(.*)\.(.*)$/);
+    // only one round, please
+    if (!!this[ext]) return yield next;
+
+    var m = this.path.match(/(.*)\.([^\/\.]*)$/);
 
     if (m) {
       this[prefix + 'Accepts'] = this.accepts;
       this.accepts = accepts;
       this[ext] = m[2].toLowerCase();
-      this[prefix + 'Path'] = this.oath;
+      this[prefix + 'Path'] = this.path;
       this.path = m[1];
     }
 
