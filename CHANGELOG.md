@@ -1,3 +1,8 @@
+## 0.0.4
+
+* Switches from a regex to the path module for determining the request extension.
+* Adds an initial test suite.
+
 ## 0.0.3
 
 * __BUG:__ Fixes typo preventing originalPath from being set.
